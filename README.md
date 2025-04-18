@@ -2313,3 +2313,96 @@ pd.Series(rf_model.feature_importances_,x_test.columns).sort_values(ascending=Fa
 ```python
 
 ```
+<h2>Results</h2>
+
+<p>So now let's summrise our findings in <strong>Regression</strong> models and <strong>classifcation</strong> models</p>
+
+<h3>Regression Results – Predicting House Sale Price</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>R² Score</th>
+      <th>RMSE (log scale)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linear Regression</td>
+      <td>0.76767</td>
+      <td>0.20822</td>
+    </tr>
+    <tr>
+      <td><strong>Ridge Regression</strong></td>
+      <td><strong>0.9042</strong></td>
+      <td><strong>0.1337</strong></td>
+    </tr>
+    <tr>
+      <td>Lasso Regression</td>
+      <td>0.8012</td>
+      <td>0.1926</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Ridge Regression</strong> performed better than the other two models as it had the lowest RMSE and the highest R².</p>
+
+<h4>Most Influencing Features for Linear Models</h4>
+<ul>
+  <li>RoofMatl_Metal</li>
+  <li>RoofMatl_Roll</li>
+  <li>RoofMatl_WdShngl</li>
+  <li>RoofMatl_CompShg</li>
+  <li>RoofMatl_WdShake</li>
+</ul>
+
+<h3>Classification Results – Predicting SaleCondition: Normal</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Accuracy</th>
+      <th>Precision (Normal)</th>
+      <th>Recall (Normal)</th>
+      <th>F1-Score (Normal)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Logistic Regression</strong></td>
+      <td><strong>0.918</strong></td>
+      <td>0.91</td>
+      <td><strong>0.99</strong></td>
+      <td><strong>0.95</strong></td>
+    </tr>
+    <tr>
+      <td>Decision Tree (depth=5)</td>
+      <td>0.912</td>
+      <td>0.91</td>
+      <td>0.99</td>
+      <td>0.95</td>
+    </tr>
+    <tr>
+      <td>Random Forest (depth=5)</td>
+      <td>0.885</td>
+      <td>1.00</td>
+      <td>0.44</td>
+      <td>0.61</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Logistic Regression</strong> had the best balance of precision and recall.</p>
+<p><strong>Decision Tree</strong> results are the same as Logistic Regression with neglectable difference in accuracy</p>
+<strong>Random Forest</strong> had perfect precision but had low recall.</p>
+
+<h4>Top Features in Random Forest</h4>
+<ul>
+  <li>SaleCondition_Partial</li>
+  <li>SaleType_New</li>
+  <li>SaleType_WD</li>
+  <li>YearBuilt</li>
+  <li>GarageYrBlt</li>
+</ul>
