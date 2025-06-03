@@ -183,7 +183,7 @@ display(df.info())
 
 ```
 
-    <class 'pandas.core.frame.DataFrame'>
+
     RangeIndex: 1460 entries, 0 to 1459
     Data columns (total 81 columns):
      #   Column         Non-Null Count  Dtype  
@@ -557,7 +557,7 @@ sns.histplot(df["SalePrice"], kde = True)
 
 
 
-    <AxesSubplot:xlabel='SalePrice', ylabel='Count'>
+
 
 
 
@@ -764,7 +764,7 @@ sns.heatmap(corr[["SalePrice"]].sort_values(by="SalePrice", ascending= False))
 
 
 
-    <AxesSubplot:>
+
 
 
 
@@ -784,7 +784,6 @@ sns.scatterplot(x="GrLivArea", y = "SalePrice", data=df)
 
 
 
-    <AxesSubplot:xlabel='GrLivArea', ylabel='SalePrice'>
 
 
 
@@ -802,7 +801,7 @@ sns.scatterplot(x="GarageArea", y = "SalePrice", data=df)
 
 
 
-    <AxesSubplot:xlabel='GarageArea', ylabel='SalePrice'>
+
 
 
 
@@ -820,7 +819,7 @@ sns.scatterplot(x="1stFlrSF", y = "SalePrice", data=df)
 
 
 
-    <AxesSubplot:xlabel='1stFlrSF', ylabel='SalePrice'>
+
 
 
 
@@ -840,7 +839,7 @@ sns.boxplot(x = "OverallQual", y = "SalePrice", data = df)
 
 
 
-    <AxesSubplot:xlabel='OverallQual', ylabel='SalePrice'>
+
 
 
 
@@ -850,8 +849,8 @@ sns.boxplot(x = "OverallQual", y = "SalePrice", data = df)
     
 
 
-We can see here in this boxplot with a random feature "OverallQuell" we have some outliers.
-Also, it seems like the overallQual in proportional linear with SalePrice.
+We can see here in this boxplot choosing a random feature "OverallQuell", we have some outliers.
+Also, it seems like the OverallQual is proportionally linear with SalePrice.
 
 
 ```python
@@ -1029,7 +1028,7 @@ sns.boxplot(x = "SaleCondition", y = "SalePrice", data = df)
 
 
 
-    <AxesSubplot:xlabel='SaleCondition', ylabel='SalePrice'>
+
 
 
 
@@ -1587,7 +1586,7 @@ sns.histplot(data = df, x = "SalePrice", kde = True)
 
 
 
-    <AxesSubplot:xlabel='SalePrice', ylabel='Count'>
+
 
 
 
