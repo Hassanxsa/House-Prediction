@@ -1039,6 +1039,27 @@ sns.boxplot(x = "SaleCondition", y = "SalePrice", data = df)
 
 
 <p>We can notice that houses with partial sale condition tend to have higher sale prices than other sale conditions.</p> <p>Also, there are many outliers in the Normal category.</p>
+<h3>Log-transform SalePrice</h3>
+<p>Since our SalePrice is right skewed, we need to make it with almost zero skewness (normal distribution).</p>
+
+
+```python
+df["SalePrice"] = np.log(df["SalePrice"])
+sns.histplot(data = df, x = "SalePrice", kde = True)
+```
+
+
+
+
+
+
+
+
+
+    
+![png](HousePricePrediction_files/HousePricePrediction_49_1.png)
+
+
 
 Now let's use the Z-score and IQR methods to determine outliers.
 
@@ -1573,26 +1594,6 @@ df[int_columns] = scalar.transform(df[int_columns]) # scale each record
 
 
 ```
-
-<h3>Log-transform SalePrice</h3>
-<p>Since our SalePrice is right skewed, we need to make it with almost zero skewness (normal distribution).</p>
-
-
-```python
-df["SalePrice"] = np.log(df["SalePrice"])
-sns.histplot(data = df, x = "SalePrice", kde = True)
-```
-
-
-
-
-
-
-
-
-
-    
-![png](HousePricePrediction_files/HousePricePrediction_49_1.png)
     
 
 
